@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.google.firebase.ml.md"
+    package="com.plweegie.ml.mltracer"
     android:installLocation="auto">
 
   <uses-feature android:name="android.hardware.camera"/>
@@ -22,7 +22,7 @@
         android:value="@integer/google_play_services_version"/>
 
     <activity
-        android:name=".MainActivity"
+        android:name="com.plweegie.ml.mltracer.LiveObjectDetectionActivity"
         android:exported="true"
         android:screenOrientation="portrait">
       <intent-filter>
@@ -32,25 +32,7 @@
     </activity>
 
     <activity
-        android:name=".LiveObjectDetectionActivity"
-        android:exported="false"
-        android:screenOrientation="portrait">
-    </activity>
-
-    <activity
-        android:name=".LiveBarcodeScanningActivity"
-        android:exported="false"
-        android:screenOrientation="portrait">
-    </activity>
-
-    <activity
-        android:name=".StaticObjectDetectionActivity"
-        android:exported="false"
-        android:screenOrientation="portrait">
-    </activity>
-
-    <activity
-        android:name=".settings.SettingsActivity"
+        android:name="com.plweegie.ml.mltracer.settings.SettingsActivity"
         android:exported="false"
         android:label="@string/settings_title"
         android:screenOrientation="portrait"
