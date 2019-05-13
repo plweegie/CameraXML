@@ -25,15 +25,15 @@ import android.graphics.Paint.Style;
 import androidx.core.content.ContextCompat;
 
 import com.plweegie.ml.mltracer.R;
-import com.plweegie.ml.mltracer.camera.GraphicOverlay.Graphic;
 import com.plweegie.ml.mltracer.camera.CameraReticleAnimator;
 import com.plweegie.ml.mltracer.camera.GraphicOverlay;
+import com.plweegie.ml.mltracer.camera.GraphicOverlay.Graphic;
 
 /**
  * A camera reticle that locates at the center of canvas to indicate the system is active but has
  * not recognized an object yet.
  */
-class ObjectReticleGraphic extends Graphic {
+public class ObjectReticleGraphic extends Graphic {
 
     private final CameraReticleAnimator animator;
 
@@ -48,7 +48,7 @@ class ObjectReticleGraphic extends Graphic {
     private final int rippleStrokeWidth;
     private final int rippleAlpha;
 
-    ObjectReticleGraphic(GraphicOverlay overlay, CameraReticleAnimator animator) {
+    public ObjectReticleGraphic(GraphicOverlay overlay, CameraReticleAnimator animator) {
         super(overlay);
         this.animator = animator;
 

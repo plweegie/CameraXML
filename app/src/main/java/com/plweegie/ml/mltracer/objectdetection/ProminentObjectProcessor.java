@@ -22,17 +22,17 @@ import android.util.Log;
 import androidx.annotation.MainThread;
 
 import com.google.android.gms.tasks.Task;
-import com.plweegie.ml.mltracer.R;
-import com.plweegie.ml.mltracer.camera.WorkflowModel.WorkflowState;
 import com.google.firebase.ml.vision.FirebaseVision;
 import com.google.firebase.ml.vision.common.FirebaseVisionImage;
 import com.google.firebase.ml.vision.objects.FirebaseVisionObject;
 import com.google.firebase.ml.vision.objects.FirebaseVisionObjectDetector;
 import com.google.firebase.ml.vision.objects.FirebaseVisionObjectDetectorOptions;
+import com.plweegie.ml.mltracer.R;
 import com.plweegie.ml.mltracer.camera.CameraReticleAnimator;
 import com.plweegie.ml.mltracer.camera.FrameProcessorBase;
 import com.plweegie.ml.mltracer.camera.GraphicOverlay;
 import com.plweegie.ml.mltracer.camera.WorkflowModel;
+import com.plweegie.ml.mltracer.camera.WorkflowModel.WorkflowState;
 import com.plweegie.ml.mltracer.settings.PreferenceUtils;
 
 import java.io.IOException;
@@ -78,13 +78,13 @@ public class ProminentObjectProcessor extends FrameProcessorBase<List<FirebaseVi
     }
 
     @Override
-    protected Task<List<FirebaseVisionObject>> detectInImage(FirebaseVisionImage image) {
+    public Task<List<FirebaseVisionObject>> detectInImage(FirebaseVisionImage image) {
         return detector.processImage(image);
     }
 
     @MainThread
     @Override
-    protected void onSuccess(
+    public void onSuccess(
             FirebaseVisionImage image,
             List<FirebaseVisionObject> objects,
             GraphicOverlay graphicOverlay) {

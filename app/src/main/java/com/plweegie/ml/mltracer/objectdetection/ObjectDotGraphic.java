@@ -24,8 +24,8 @@ import android.graphics.PointF;
 import android.graphics.Rect;
 
 import com.plweegie.ml.mltracer.R;
-import com.plweegie.ml.mltracer.camera.GraphicOverlay.Graphic;
 import com.plweegie.ml.mltracer.camera.GraphicOverlay;
+import com.plweegie.ml.mltracer.camera.GraphicOverlay.Graphic;
 
 /** A dot to indicate a detected object used by multiple objects detection mode. */
 class ObjectDotGraphic extends Graphic {

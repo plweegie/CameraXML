@@ -31,8 +31,8 @@ import androidx.annotation.ColorInt;
 import androidx.core.content.ContextCompat;
 
 import com.plweegie.ml.mltracer.R;
-import com.plweegie.ml.mltracer.camera.GraphicOverlay.Graphic;
 import com.plweegie.ml.mltracer.camera.GraphicOverlay;
+import com.plweegie.ml.mltracer.camera.GraphicOverlay.Graphic;
 
 /**
  * Draws the detected object info over the camera preview for multiple objects detection mode.

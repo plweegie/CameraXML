@@ -27,8 +27,8 @@ import android.view.SurfaceHolder;
 import android.view.WindowManager;
 
 import com.google.android.gms.common.images.Size;
-import com.plweegie.ml.mltracer.R;
 import com.google.firebase.ml.vision.common.FirebaseVisionImageMetadata;
+import com.plweegie.ml.mltracer.R;
 import com.plweegie.ml.mltracer.Utils;
 import com.plweegie.ml.mltracer.settings.PreferenceUtils;
 

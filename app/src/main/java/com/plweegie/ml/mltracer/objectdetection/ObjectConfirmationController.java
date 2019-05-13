@@ -27,7 +27,7 @@ import com.plweegie.ml.mltracer.settings.PreferenceUtils;
  * Controls the progress of object confirmation before performing additional operation on the
  * detected object.
  */
-class ObjectConfirmationController {
+public class ObjectConfirmationController {
 
     private final CountDownTimer countDownTimer;
 
@@ -38,7 +38,7 @@ class ObjectConfirmationController {
     /**
      * @param graphicOverlay Used to refresh camera overlay when the confirmation progress updates.
      */
-    ObjectConfirmationController(GraphicOverlay graphicOverlay) {
+    public ObjectConfirmationController(GraphicOverlay graphicOverlay) {
         long confirmationTimeMs = PreferenceUtils.getConfirmationTimeMs(graphicOverlay.getContext());
         countDownTimer =
                 new CountDownTimer(confirmationTimeMs, /* countDownInterval= */ 20) {
@@ -55,7 +55,7 @@ class ObjectConfirmationController {
                 };
     }
 
-    void confirming(Integer objectId) {
+    public void confirming(Integer objectId) {
         if (objectId.equals(this.objectId)) {
             // Do nothing if it's already in confirming.
             return;
@@ -66,18 +66,18 @@ class ObjectConfirmationController {
         countDownTimer.start();
     }
 
-    boolean isConfirmed() {
+    public boolean isConfirmed() {
         return Float.compare(progress, 1) == 0;
     }
 
-    void reset() {
+    public void reset() {
         countDownTimer.cancel();
         objectId = null;
         progress = 0;
     }
 
     /** Returns the confirmation progress described as a float value in the range of [0, 1]. */
-    float getProgress() {
+    public float getProgress() {
         return progress;
     }
 }

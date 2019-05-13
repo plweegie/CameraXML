@@ -37,7 +37,7 @@ import com.plweegie.ml.mltracer.camera.GraphicOverlay.Graphic;
 /**
  * Draws the detected object info over the camera preview for prominent object detection mode.
  */
-class ObjectGraphicInProminentMode extends Graphic {
+public class ObjectGraphicInProminentMode extends Graphic {
 
     private final FirebaseVisionObject object;
     private final ObjectConfirmationController confirmationController;
@@ -51,7 +51,7 @@ class ObjectGraphicInProminentMode extends Graphic {
     private final int boxGradientEndColor;
     private final int boxCornerRadius;
 
-    ObjectGraphicInProminentMode(
+    public ObjectGraphicInProminentMode(
             GraphicOverlay overlay,
             FirebaseVisionObject object,
             ObjectConfirmationController confirmationController) {

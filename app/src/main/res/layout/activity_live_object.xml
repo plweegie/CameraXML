@@ -6,14 +6,18 @@
     android:layout_height="match_parent"
     android:keepScreenOn="true">
 
-  <com.plweegie.ml.mltracer.camera.CameraSourcePreview
-      android:id="@+id/camera_preview"
+  <FrameLayout
       android:layout_width="match_parent"
       android:layout_height="match_parent">
 
+    <TextureView
+        android:id="@+id/camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
     <include layout="@layout/camera_preview_overlay"/>
 
-  </com.plweegie.ml.mltracer.camera.CameraSourcePreview>
+  </FrameLayout>
 
   <include
       layout="@layout/top_action_bar_in_live_camera"

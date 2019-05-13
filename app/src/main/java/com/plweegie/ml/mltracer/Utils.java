@@ -60,7 +60,7 @@ public class Utils {
 
     private static final String TAG = "Utils";
 
-    static void requestRuntimePermissions(Activity activity) {
+    public static void requestRuntimePermissions(Activity activity) {
         List<String> allNeededPermissions = new ArrayList<>();
         for (String permission : getRequiredPermissions(activity)) {
             if (checkSelfPermission(activity, permission) != PackageManager.PERMISSION_GRANTED) {
@@ -74,7 +74,7 @@ public class Utils {
         }
     }
 
-    static boolean allPermissionsGranted(Context context) {
+    public static boolean allPermissionsGranted(Context context) {
         for (String permission : getRequiredPermissions(context)) {
             if (checkSelfPermission(context, permission) != PackageManager.PERMISSION_GRANTED) {
                 return false;

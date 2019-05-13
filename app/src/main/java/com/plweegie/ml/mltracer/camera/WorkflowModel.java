@@ -24,10 +24,10 @@ import androidx.annotation.Nullable;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
 
-import com.plweegie.ml.mltracer.productsearch.SearchEngine.SearchResultListener;
 import com.google.firebase.ml.vision.barcode.FirebaseVisionBarcode;
 import com.plweegie.ml.mltracer.objectdetection.DetectedObject;
 import com.plweegie.ml.mltracer.productsearch.Product;
+import com.plweegie.ml.mltracer.productsearch.SearchEngine.SearchResultListener;
 import com.plweegie.ml.mltracer.productsearch.SearchedObject;
 import com.plweegie.ml.mltracer.settings.PreferenceUtils;
 

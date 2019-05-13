@@ -26,8 +26,8 @@ import android.graphics.RectF;
 import androidx.core.content.ContextCompat;
 
 import com.plweegie.ml.mltracer.R;
-import com.plweegie.ml.mltracer.camera.GraphicOverlay.Graphic;
 import com.plweegie.ml.mltracer.camera.GraphicOverlay;
+import com.plweegie.ml.mltracer.camera.GraphicOverlay.Graphic;
 import com.plweegie.ml.mltracer.settings.PreferenceUtils;
 
 /**
@@ -46,7 +46,7 @@ public class ObjectConfirmationGraphic extends Graphic {
     private final int outerRingStrokeRadius;
     private final int innerRingStrokeRadius;
 
-    ObjectConfirmationGraphic(
+    public ObjectConfirmationGraphic(
             GraphicOverlay overlay, ObjectConfirmationController confirmationController) {
         super(overlay);
 
